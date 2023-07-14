@@ -1,6 +1,6 @@
 # latest working version prior iTwinJS 4.0
 
-until the reporting widget get an update - use this.
+until the reporting widget gets an update - use this.
 
 # Getting Started with the iTwin Viewer Create React App Template
 
