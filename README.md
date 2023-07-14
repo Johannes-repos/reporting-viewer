@@ -1,3 +1,7 @@
+# latest working version prior iTwinJS 4.0
+
+until the reporting widget get an update - use this.
+
 # Getting Started with the iTwin Viewer Create React App Template
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
