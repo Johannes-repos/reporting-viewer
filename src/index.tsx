@@ -6,6 +6,7 @@ import ReactDOM from "react-dom";
 
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+import { handleEC3AuthCallback } from "@itwin/ec3-widget-react";
 
 if (!process.env.IMJS_AUTH_CLIENT_CLIENT_ID) {
   throw new Error(
@@ -22,6 +23,13 @@ if (!process.env.IMJS_AUTH_CLIENT_REDIRECT_URI) {
     "Please add a valid redirect URI to the .env file and restart the application. See the README for more information."
   );
 }
+else if (window.location.pathname === "/callback") {
+  handleEC3AuthCallback({
+    clientId: "...",
+    redirectUri: ".../callback",
+  });
+}
+
 
 const redirectUrl = new URL(process.env.IMJS_AUTH_CLIENT_REDIRECT_URI);
 if (redirectUrl.pathname === window.location.pathname) {

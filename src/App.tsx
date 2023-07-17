@@ -30,6 +30,8 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { history } from "./history";
 import { GroupingMappingProvider } from "@itwin/grouping-mapping-widget";
 import { ReportsConfigProvider, ReportsConfigWidget } from "@itwin/reports-config-widget-react";
+import { OneClickLCAProvider } from "@itwin/one-click-lca-react";
+import { EC3Provider } from "@itwin/ec3-widget-react";
 
 const App: React.FC = () => {
   const [iModelId, setIModelId] = useState(process.env.IMJS_IMODEL_ID);
@@ -171,6 +173,11 @@ const App: React.FC = () => {
           new MeasureToolsUiItemsProvider(),
           new GroupingMappingProvider(),
           new ReportsConfigProvider(),
+          new OneClickLCAProvider(),
+          new EC3Provider({
+            clientId: "...",
+            redirectUri: "...",
+          }),
         ]}
       />
     </div>
